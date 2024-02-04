@@ -10,5 +10,8 @@ MyDB = mysql.connector.connect(
 
 df = pd.read_csv("C:/Users/ADMIN/Documents/GitHub/Python_Projects/IMBD_movie/imdb_movie_data_2023.csv")
 df1 = list(set(df['Genre']))
-for i in range(len(df1)):
 mycur = MyDB.cursor()
+for i in range(len(df1)):
+    x = df[i,'Genre']
+
+
