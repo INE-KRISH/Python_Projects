@@ -10,7 +10,8 @@ MyDB = mysql.connect(
 )
 MyCursor = MyDB.cursor(buffered=True)
 MyCursor.execute("select distinct Genre from imbd_movie;")
+for Genre in MyCursor:
+   print(Genre)
 MyDB.commit()
 MyCursor.close()
 MyDB.close()
-print("got the genre")
