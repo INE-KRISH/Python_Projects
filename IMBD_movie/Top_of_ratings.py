@@ -13,5 +13,5 @@ df1 = list(set(df['Genre']))
 mycur = MyDB.cursor()
 for i in range(len(df1)):
     x = df[i,'Genre']
-
+    
 
